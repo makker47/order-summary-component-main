@@ -1,0 +1,221 @@
+:root {
+
+
+
+/* ### Primary */
+
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(228, 88%, 90%);
+
+/* ### Neutral */
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+
+
+body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    background-size: contain;
+    min-height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+p span {
+    font-size: 16px;
+}
+
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    background: var(--Very-pale-blue);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.75);
+    margin-top: auto;
+    
+    
+}
+
+.card-img {
+    width: 100%;
+    
+}
+
+.text {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.text p {
+    margin-top: 1rem;
+    width: 20rem;
+}
+
+.price {
+    
+    display: flex;
+   
+    margin: 0 0rem 1.25rem 0rem;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 82%;
+    height: 6rem;
+    
+    background-color: var(--Bright-blue);
+    border-radius: 0.5rem;
+    
+}
+
+.box-prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+span, p {
+    color: var(--Desaturated-blue);
+}
+
+.change {
+    text-decoration: none;
+    position: relative;
+}
+
+.change::after {
+    position: absolute;
+    content: "";
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    height: 1px;
+    background: blue;
+    transform: scale(0);
+    transform-origin: center;
+    transition: 750ms ease-in-out;
+
+
+}
+
+.change:hover::after {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+.button-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.payment {
+    
+    min-width: 82%;
+    height: 2.50rem;
+    border-radius: 0.5rem;
+    border: unset;
+    background-color: var(--Dark-blue);
+    color: var(--Very-pale-blue);
+    margin-bottom: 1.25rem;
+    box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 750ms ease-in-out;
+    
+}
+
+.payment:hover {
+    border: 2px solid var(--Dark-blue);
+    background: var(--Very-pale-blue);
+    color: var(--Dark-blue)
+    
+
+}
+
+.cancel {
+    all: unset;
+    color: var(--Desaturated-blue);
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+    
+}
+
+.cancel:hover {
+    color: var(--Dark-blue);
+}
+
+.attribution { 
+    display: flex;
+    font-size: 11px;
+    text-align: center;
+    margin-top: auto;
+    
+    
+     }
+     
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    position: relative;
+    
+    
+    
+}
+
+.attribution a:hover {
+    color: blue;
+}
+
+.attribution a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: blue;
+    bottom: 0;
+    right: 0;
+    /* transform-origin: repeat; */
+    transform: scale(0);
+    transition: 750ms ease;
+    
+}
+
+.attribution a:hover::after {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--Pale-blue);
+
+    }
+}
+    
