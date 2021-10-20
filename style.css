@@ -41,7 +41,7 @@ p span {
     font-size: 16px;
 }
 
-.container {
+.main {
     
     display: flex;
     flex-direction: column;
